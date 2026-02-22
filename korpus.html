@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulačka korpusu</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Kalkulačka korpusu</h1>
+  <p>Výpočet surovin a ceny podle průměru formy</p>
+</header>
+
+<div class="container">
+
+<div class="calc-card">
+
+<div class="row">
+<label>Průměr formy:</label>
+<select id="diameter"></select>
+</div>
+
+<h3>Ceník surovin</h3>
+
+<div class="row">
+<label>Vejce (Kč/ks)</label>
+<input id="eggPrice" type="number" value="9.1" step="0.1">
+</div>
+
+<div class="row">
+<label>Cukr (Kč/kg)</label>
+<input id="sugarPrice" type="number" value="16">
+</div>
+
+<div class="row">
+<label>Mouka (Kč/kg)</label>
+<input id="flourPrice" type="number" value="15">
+</div>
+
+<div class="row">
+<label>Olej (Kč/l)</label>
+<input id="oilPrice" type="number" value="55">
+</div>
+
+<h3>Spotřeba surovin</h3>
+
+<div class="row"><span>Vejce:</span><span id="eggs"></span></div>
+<div class="row"><span>Cukr:</span><span id="sugar"></span></div>
+<div class="row"><span>Mouka:</span><span id="flour"></span></div>
+<div class="row"><span>Olej:</span><span id="oil"></span></div>
+
+<div class="result">Výrobní cena: <span class="price" id="cost"></span> Kč</div>
+<div class="result">Doporučená cena: <span class="price" id="sell"></span> Kč</div>
+
+</div>
+</div>
+
+<footer>
+  <a href="index.html">← zpět na přehled kalkulaček</a>
+</footer>
+
+<script>
+const forms = {
+    10:{eggs:3,sugar:90,flour:90,oil:45},
+    11:{eggs:4,sugar:120,flour:120,oil:60},
+    15:{eggs:5,sugar:150,flour:150,oil:75},
+    18:{eggs:6,sugar:180,flour:180,oil:90},
+    22:{eggs:7,sugar:210,flour:210,oil:105},
+    24:{eggs:8,sugar:240,flour:240,oil:120}
+};
+
+const select=document.getElementById("diameter");
+for(let d in forms){
+    let opt=document.createElement("option");
+    opt.value=d;
+    opt.text=d+" cm";
+    select.appendChild(opt);
+}
+
+function calc(){
+
+let d=select.value;
+let f=forms[d];
+
+let eggPrice=parseFloat(document.getElementById("eggPrice").value)||0;
+let sugarPrice=parseFloat(document.getElementById("sugarPrice").value)||0;
+let flourPrice=parseFloat(document.getElementById("flourPrice").value)||0;
+let oilPrice=parseFloat(document.getElementById("oilPrice").value)||0;
+
+document.getElementById("eggs").innerText=f.eggs+" ks";
+document.getElementById("sugar").innerText=f.sugar+" g";
+document.getElementById("flour").innerText=f.flour+" g";
+document.getElementById("oil").innerText=f.oil+" ml";
+
+let cost =
+(f.eggs*eggPrice)+
+((f.sugar/1000)*sugarPrice)+
+((f.flour/1000)*flourPrice)+
+((f.oil/1000)*oilPrice);
+
+document.getElementById("cost").innerText=cost.toFixed(2);
+document.getElementById("sell").innerText=(cost*3).toFixed(2);
+}
+
+select.onchange=calc;
+document.querySelectorAll("input").forEach(i=>i.oninput=calc);
+calc();
+</script>
+
+</body>
+</html>
