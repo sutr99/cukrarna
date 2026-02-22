@@ -36,8 +36,8 @@ let cost =
 ((f.flour/1000)*flourPrice)+
 ((f.oil/1000)*oilPrice);
 
-document.getElementById("cost").innerText=cost.toFixed(2);
-document.getElementById("sell").innerText=(cost*3).toFixed(2);
+document.getElementById("cost").innerText=cost.toFixed(1);
+document.getElementById("sell").innerText=(cost*3).toFixed(1);
 }
 
 select.onchange=calc;
