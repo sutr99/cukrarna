@@ -64,8 +64,8 @@ flex:1;
   }
   
   .container{
-    margin:20px auto;
-    padding:0 12px;
+    margin:12px auto;
+    padding:0 6px;
   }
 }
 
@@ -80,7 +80,8 @@ flex:1;
   }
   
   .container{
-    margin:15px auto;
+    margin:8px auto;
+    padding:0 4px;
   }
 }
 
@@ -134,24 +135,24 @@ margin-top:6px;
 /* mobilní optimalizace kart */
 @media (max-width:768px){
   .card-button{
-    padding:16px;
-    font-size:16px;
+    padding:20px;
+    font-size:18px;
   }
   
   .card-button-desc{
-    font-size:12px;
+    font-size:13px;
   }
 }
 
 @media (max-width:480px){
   .card-button{
-    padding:14px;
-    font-size:15px;
+    padding:22px;
+    font-size:18px;
   }
   
   .card-button-desc{
-    font-size:11px;
-    margin-top:4px;
+    font-size:13px;
+    margin-top:6px;
   }
 }
 
@@ -228,15 +229,19 @@ padding:22px;
 /* mobilní optimalizace kalkulačky */
 @media (max-width:768px){
   .calc-card{
-    margin:20px auto;
-    padding:16px;
+    width:100%;
+    max-width:100%;
+    margin:14px auto;
+    padding:20px;
   }
 }
 
 @media (max-width:480px){
   .calc-card{
-    margin:15px auto;
-    padding:14px;
+    width:100%;
+    max-width:100%;
+    margin:6px auto;
+    padding:22px;
   }
 }
 
