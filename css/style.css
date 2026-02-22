@@ -46,6 +46,7 @@ color:var(--muted);
 max-width:900px;
 margin:40px auto;
 padding:0 18px;
+flex:1;
 }
 
 /* mobilní optimalizace */
@@ -186,7 +187,7 @@ text-align:center;
 padding:30px 10px;
 color:var(--muted);
 font-size:13px;
-margin-top:50px;
+margin-top:auto;
 }
 
 .back-button{
