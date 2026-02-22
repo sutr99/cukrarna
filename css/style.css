@@ -65,6 +65,33 @@ transform:translateY(-2px);
 box-shadow:0 6px 16px rgba(0,0,0,0.08);
 }
 
+/* card jako tlačítko */
+.card-button{
+display:block;
+padding:20px;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+text-decoration:none;
+color:var(--text);
+font-size:18px;
+font-weight:600;
+transition:0.15s ease;
+text-align:center;
+}
+
+.card-button:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+
+.card-button-desc{
+font-size:13px;
+color:var(--muted);
+font-weight:400;
+margin-top:6px;
+}
+
 .card h3{
 margin:0 0 6px 0;
 font-size:18px;
