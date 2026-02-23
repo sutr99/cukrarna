@@ -266,6 +266,32 @@ gap:10px;
 flex-wrap:wrap;
 }
 
+.price-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:12px;
+margin-bottom:18px;
+}
+
+.price-grid .row{
+margin:0;
+flex-direction:row;
+align-items:center;
+justify-content:space-between;
+}
+
+.price-grid .row label{
+flex:1;
+margin-bottom:0;
+font-size:13px;
+min-width:unset;
+}
+
+.price-grid .row input{
+width:120px;
+font-size:14px;
+}
+
 .row-inline{
 flex-direction:row;
 }
