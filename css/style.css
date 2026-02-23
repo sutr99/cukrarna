@@ -338,8 +338,12 @@ font-size:14px;
 }
 
 .result{
+display:flex;
+justify-content:space-between;
+align-items:center;
 margin-top:18px;
 font-weight:600;
+gap:12px;
 }
 
 .price{
