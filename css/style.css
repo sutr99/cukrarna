@@ -292,6 +292,24 @@ width:120px;
 font-size:14px;
 }
 
+.price-grid .row select{
+width:120px;
+font-size:14px;
+}
+
+.row.diameter-row label{
+flex:1;
+margin-bottom:0;
+font-size:18px;
+font-weight:600;
+min-width:unset;
+}
+
+.row.diameter-row select{
+width:120px;
+font-size:14px;
+}
+
 .row-inline{
 flex-direction:row;
 }
@@ -322,11 +340,22 @@ font-size:14px;
     flex-direction:row;
     align-items:center;
   }
+
+  .row.diameter-row{
+    flex-direction:row;
+    align-items:center;
+  }
   
   .row label{
     width:100%;
     margin-bottom:4px;
     font-size:13px;
+  }
+
+  .row.diameter-row label{
+    width:auto;
+    margin-bottom:0;
+    font-size:18px;
   }
   
   .row input,
@@ -334,6 +363,12 @@ font-size:14px;
     width:100%;
     padding:8px;
     font-size:16px;
+  }
+
+  .row.diameter-row select{
+    width:120px;
+    padding:7px;
+    font-size:14px;
   }
 }
 
