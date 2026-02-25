@@ -195,12 +195,12 @@ margin-top:auto;
 display:block;
 background:var(--accent);
 color:white;
-padding:12px 18px;
+padding:14px 22px;
 border-radius:8px;
 text-decoration:none;
-font-size:14px;
+font-size:16px;
 transition:0.15s ease;
-margin-top:18px;
+margin-top:24px;
 text-align:center;
 }
 
@@ -211,9 +211,9 @@ opacity:0.9;
 /* mobilní optimalizace tlačítka */
 @media (max-width:480px){
   .back-button{
-    padding:14px 16px;
-    font-size:13px;
-    margin-top:14px;
+    padding:16px 18px;
+    font-size:15px;
+    margin-top:18px;
   }
 }
 /* extra mobilni optimalizace <420px */
@@ -230,12 +230,12 @@ opacity:0.9;
 }
 /* formulář kalkulačky */
 .calc-card{
-max-width:560px;
+max-width:1210px;
 margin:30px auto;
 background:white;
 border:1px solid var(--border);
 border-radius:12px;
-padding:22px;
+padding:47px;
 }
 
 /* mobilní optimalizace kalkulačky */
@@ -244,7 +244,7 @@ padding:22px;
     width:100%;
     max-width:100%;
     margin:14px auto;
-    padding:20px;
+    padding:46px;
   }
 }
 
@@ -253,7 +253,7 @@ padding:22px;
     width:100%;
     max-width:100%;
     margin:6px auto;
-    padding:22px;
+    padding:51px;
   }
 }
 
@@ -261,16 +261,16 @@ padding:22px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin:10px 0;
-gap:10px;
+margin:14px 0;
+gap:14px;
 flex-wrap:wrap;
 }
 
 .price-grid{
 display:grid;
 grid-template-columns:1fr;
-gap:12px;
-margin-bottom:18px;
+gap:16px;
+margin-bottom:24px;
 }
 
 .price-grid .row{
@@ -283,31 +283,49 @@ justify-content:space-between;
 .price-grid .row label{
 flex:1;
 margin-bottom:0;
-font-size:13px;
+font-size:16px;
 min-width:unset;
 }
 
 .price-grid .row input{
-width:120px;
-font-size:14px;
+width:150px;
+font-size:16px;
 }
 
 .price-grid .row select{
-width:120px;
-font-size:14px;
+width:150px;
+font-size:16px;
+}
+
+.section-title{
+font-size:22px;
+font-weight:600;
+}
+
+h3.section-title{
+margin:20px 0 10px 0;
+}
+
+label.section-title{
+margin:0;
 }
 
 .row.diameter-row label{
 flex:1;
 margin-bottom:0;
-font-size:18px;
-font-weight:600;
 min-width:unset;
 }
 
+.row.diameter-row{
+background:#f8fafc;
+border:1px solid var(--border);
+border-radius:10px;
+padding:14px 16px;
+}
+
 .row.diameter-row select{
-width:120px;
-font-size:14px;
+width:150px;
+font-size:16px;
 }
 
 .row-inline{
@@ -315,18 +333,18 @@ flex-direction:row;
 }
 
 .row label{
-font-size:14px;
+font-size:16px;
 flex:1;
-min-width:150px;
+min-width:180px;
 }
 
 .row input,
 .row select{
-padding:7px;
+padding:9px;
 border:1px solid var(--border);
 border-radius:6px;
-width:140px;
-font-size:14px;
+width:170px;
+font-size:16px;
 }
 
 /* mobilní optimalizace formulare */
@@ -349,26 +367,25 @@ font-size:14px;
   .row label{
     width:100%;
     margin-bottom:4px;
-    font-size:13px;
+    font-size:15px;
   }
 
   .row.diameter-row label{
     width:auto;
     margin-bottom:0;
-    font-size:18px;
   }
   
   .row input,
   .row select{
     width:100%;
-    padding:8px;
-    font-size:16px;
+    padding:10px;
+    font-size:18px;
   }
 
   .row.diameter-row select{
-    width:120px;
-    padding:7px;
-    font-size:14px;
+    width:150px;
+    padding:9px;
+    font-size:16px;
   }
 }
 
@@ -376,13 +393,14 @@ font-size:14px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-top:18px;
+margin-top:24px;
 font-weight:600;
-gap:12px;
+gap:16px;
+font-size:18px;
 }
 
 .price{
-font-size:22px;
+font-size:28px;
 color:#15803d;
 font-weight:700;
 }
